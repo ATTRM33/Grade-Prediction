@@ -1,10 +1,11 @@
 #include "Category.h"
 #include "Assignment.h"
+#include <iomanip>
+#include <sstream>
 
-Category::Category(std::string name, double weight):
-name(name), weight(weight){
+Category::Category(std::string name, double weight) :
+name(name), weight(weight){}
 
-}
 void Category::addAssignment(const Assignment& assignment) {
 	assignments.push_back(assignment);
 }
@@ -43,4 +44,34 @@ void Category::editAssignment(const std::string& assignmentName, float newScore)
 			break;
 		}
 	}
+}
+
+std::string Category::getSummary() const {
+	std::ostringstream oss;
+	oss << "Category: " << name << "\n";
+	oss << "Weight: " << weight << "\n";
+	oss << "Assignments:\n";
+	for (const Assignment& assignment : assignments) {
+		oss << "  - " << assignment.getName() << ": "
+			<< assignment.getPointsEarned() << "/" << assignment.getTotalPoints()
+			<< (assignment.getIsTurnedIn() ? " (Completed)" : " (Not Completed)")
+			<< "\n";
+	}
+	oss << std::fixed << std::setprecision(2);
+	oss << "Current Grade: " << findCurrentGrade() << std::endl;
+	oss << "Projected Grade: " << findProjectedGrade() << std::endl;
+	return oss.str();
+}
+
+
+std::string Category::getName() const {
+	return name;
+}
+
+double Category::getWeight() const {
+	return weight;
+}
+
+const std::vector<Assignment>& Category::getAssignments() const {
+	return assignments;
 }

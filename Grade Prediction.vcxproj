@@ -129,11 +129,17 @@
   <ItemGroup>
     <ClCompile Include="Assignment.cpp" />
     <ClCompile Include="Category.cpp" />
+    <ClCompile Include="ConsoleUI.cpp" />
+    <ClCompile Include="FileHandler.cpp" />
+    <ClCompile Include="GradePredictor.cpp" />
     <ClCompile Include="Main_Program.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment.h" />
     <ClInclude Include="Category.h" />
+    <ClInclude Include="ConsoleUI.h" />
+    <ClInclude Include="FileHandler.h" />
+    <ClInclude Include="GradePredictor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

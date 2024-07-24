@@ -12,16 +12,15 @@ class Category
 	double weight;
 	std::vector<Assignment> assignments;
 public:
-	Category(std::string name, double weight);
-	void addAssignment(const Assignment& assignment);
-	void editAssignment(const std::string& assignmentName, float newScore);
-	double findCurrentGrade() const;
-	double findProjectedGrade() const;
-	
-	std::string getSummary() const;
-	std::string getName() const;
-	double getWeight() const;
-	const std::vector<Assignment>& getAssignments() const;
+    Category(const std::string name, double weight);
+    void addAssignment(const Assignment& assignment);
+    void editAssignment(const std::string& assignmentName, float newScore);
+    double findCurrentGrade() const;
+    double findProjectedGrade() const;
+    std::string getSummary() const;
+    std::string getName() const;
+    double getWeight() const;
+    const std::vector<Assignment>& getAssignments() const;
 	
 
 };
