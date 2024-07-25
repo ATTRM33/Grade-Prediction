@@ -14,7 +14,7 @@ public:
     void addCategory(const Category& category);
     void addAssignmentToCategory(const std::string& categoryName, const Assignment& assignment);
     std::string getCategorySummary(const std::string& categoryName) const;
-    float getOverallGrade() const;
+    double getOverallGrade() const;
     void editAssignment(const std::string& categoryName, const std::string& assignmentName, float newScore);
     void readAssignmentsFromFile(const std::string& filePath);
 };

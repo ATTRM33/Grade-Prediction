@@ -1,5 +1,6 @@
 #include "Category.h"
 #include "Assignment.h"
+#include <iostream>
 #include <iomanip>
 #include <sstream>
 
