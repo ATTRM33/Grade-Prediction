@@ -1,4 +1,0 @@
-Exam Assignment1 90 100 1
-Exam Assignment2 85 100 1
-Exam Assignment3 75 100 0
-Exam Assignment4 100 100 1

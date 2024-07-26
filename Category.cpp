@@ -18,10 +18,10 @@ double Category::findCurrentGrade() const {
 	for (const Assignment& a: assignments) {
 		if (a.getIsTurnedIn() == true) {
 			totalPointsEarned += a.getPointsEarned();
-			totalPointsEarned += a.getTotalPoints();
+			totalPointsPossible += a.getTotalPoints();
 		}
 	}
-	return totalPointsEarned / totalPointsEarned * 100;
+	return (totalPointsEarned / totalPointsPossible) * 100;
 }
 
 double Category::findProjectedGrade() const {
@@ -31,10 +31,10 @@ double Category::findProjectedGrade() const {
 	for (const Assignment& a : assignments) {
 		if (a.getIsTurnedIn() == true) {
 			totalPointsEarned += a.getPointsEarned();
-			totalPointsEarned += a.getTotalPoints();
+			totalPointsPossible += a.getTotalPoints();
 		}
 	}
-	return totalPointsEarned / totalPointsEarned * 100;
+	return (totalPointsEarned / totalPointsPossible) * 100;
 }
 
 void Category::editAssignment(const std::string& assignmentName, float newScore) {
