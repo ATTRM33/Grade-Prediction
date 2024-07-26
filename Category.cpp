@@ -27,9 +27,9 @@ double Category::findCurrentGrade() const {
 double Category::findProjectedGrade() const {
 	double totalPointsEarned = 0;
 	double totalPointsPossible = 0;
-
+	
 	for (const Assignment& a : assignments) {
-		if (a.getIsTurnedIn() == true) {
+		if (a.getIsTurnedIn() == false) {
 			totalPointsEarned += a.getPointsEarned();
 			totalPointsPossible += a.getTotalPoints();
 		}
